@@ -1,6 +1,6 @@
 ﻿// Показать кубы чисел, заканчивающихся на четную цифру
 
-void CubesOfEven(int N)
+void Cube(int N)
 {
     for (int i=0;i<=N;i=i+2)
     {
@@ -8,4 +8,4 @@ void CubesOfEven(int N)
         System.Console.WriteLine($"{i} в кубе = {a}");
     }
 }
-CubesOfEven(15);
+Cube(15);
