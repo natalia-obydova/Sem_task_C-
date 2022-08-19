@@ -2,7 +2,7 @@
 //(a[i,j]=-a[i,j])
 
 int[,] a;//описываем массив
-a=Init(3,2);
+a = Init(3, 2);
 Print(a);
 Solution(a);
 System.Console.WriteLine();
@@ -12,36 +12,36 @@ Print(a);
 //Вывод массива на экран
 void Print(int[,] a)
 {
-    for(int i=0;i<a.GetLength(0);i++)
+    for (int i = 0; i < a.GetLength(0); i++)
     {
-        for(int j=0;j<a.GetLength(1);j++) System.Console.Write($"{a[i,j],4} ");
-            System.Console.WriteLine();
+        for (int j = 0; j < a.GetLength(1); j++) System.Console.Write($"{a[i, j],4} ");
+        System.Console.WriteLine();
     }
 }
 
-int[,] Init(int N,int M)
+int[,] Init(int N, int M)
 {
-a=new int[N,M];//создаем массив
-//Инициализация случайными числами
-Random random=new Random();//Создали объект типа Random
+    a = new int[N, M];//создаем массив
+                      //Инициализация случайными числами
+    Random random = new Random();//Создали объект типа Random
 
-for(int i=0;i<a.GetLength(0);i++)
-{
-    for(int j=0;j<a.GetLength(1);j++)
+    for (int i = 0; i < a.GetLength(0); i++)
     {
-        a[i,j]=random.Next(1,11);
+        for (int j = 0; j < a.GetLength(1); j++)
+        {
+            a[i, j] = random.Next(1, 11);
+        }
     }
-}
     return a;
 }
 
 //Решить задачу
 void Solution(int[,] a)
 {
-    for(int i=0;i<a.GetLength(0);i++)
+    for (int i = 0; i < a.GetLength(0); i++)
     {
-        for(int j=0;j<a.GetLength(1);j++)
-        if (a[i,j]%2==0)
-            a[i,j]=-a[i,j];
+        for (int j = 0; j < a.GetLength(1); j++)
+            if (a[i, j] % 2 == 0)
+                a[i, j] = -a[i, j];
     }
 }
