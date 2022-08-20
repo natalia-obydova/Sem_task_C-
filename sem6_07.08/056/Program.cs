@@ -20,22 +20,22 @@ int[,] arr = new int[,]
 Print(arr);
 
 
-int Sum = 0, Sum1 = 0, Sum2 = 0, Row = 0;
+int SumMin = 0, Sum = 0, Row = 0;
 for (int i = 0; i < arr.GetLength(0); i++) //Проходим по циклу строк
 {
-    Sum2 = 0;
+    Sum = 0;
     for (int j = 0; j < arr.GetLength(1); j++) //Проходим по циклу столбцов
     {
-        Sum2 = Sum2 + arr[i, j]; //Сумма всех членов 1ой строки.
+        Sum = Sum + arr[i, j]; //Сумма всех членов 1ой строки.
     }
-    if (Sum2 < Sum1)
+    if (Sum < SumMin)
     {
-        Sum = Sum2; Row = i;
+        SumMin = Sum; 
+        Row = i;
     }
-    Sum1 = Sum2;
 }
 System.Console.WriteLine();
-Console.WriteLine("{0} строка", Row);
+Console.WriteLine("{0} строка", Row+1);
 
 void Print(int[,] arr)
 {
