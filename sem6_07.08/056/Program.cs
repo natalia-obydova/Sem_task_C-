@@ -12,8 +12,8 @@
 
 int[,] arr = new int[,]
 {
-{1, 4, 7, 2},
 {5, 9, 2, 3},
+{1, 4, 7, 2},
 {8, 4, 2, 4},
 {5, 2, 6, 7},
 };
@@ -28,7 +28,7 @@ for (int i = 0; i < arr.GetLength(0); i++) //Проходим по циклу с
     {
         Sum = Sum + arr[i, j]; //Сумма всех членов 1ой строки.
     }
-    if (Sum < SumMin)
+    if (Sum < SumMin || i == 0) 
     {
         SumMin = Sum; 
         Row = i;
